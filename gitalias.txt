@@ -1497,3 +1497,6 @@
 
   ull = pull
   ush = push
+
+  find-last-branch = !sh -c "git branch -a --sort=-committerdate | grep -v remotes | grep $1 | head -n 1 | awk '{ print $NF}' | xargs git checkout"
+  fb = !sh -c "git branch -a --sort=-committerdate | grep -v remotes | grep $1 | head -n 1 | awk '{ print $NF}' | xargs git checkout"
